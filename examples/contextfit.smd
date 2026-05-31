@@ -1,0 +1,61 @@
+---
+type: story-deck
+version: 0.1
+title: "ContextFit: Token-Native Agent Memory"
+audiences:
+  investor:
+    emphasis: market, moat, traction
+  engineer:
+    emphasis: architecture, retrieval quality, benchmarks
+render:
+  template: investor-briefing
+  aspect: "16:9"
+---
+
+# ContextFit changes how agents remember {#opening}
+
+::scene id=intro role=hook
+::layout mode=hero emphasis=title
+::motion sequence=claim-then-proof pace=deliberate
+
+:::claim id=contextfit-thesis source=whitepaper#token-native
+Agents do not need bigger context windows as much as they need better memory retrieval.
+::
+
+:::beat id=old-way role=problem reveal=1 source=whitepaper#vector-loss
+Most retrieval systems translate memory into vector space and lose source-level structure.
+::
+
+:::beat id=new-way role=reframe reveal=2 source=whitepaper#token-native
+ContextFit stays token-native, making memory indexable, attributable, and agent-friendly.
+::
+
+:::takeaway id=opening-takeaway
+The real product is not a slide; it is a structured argument graph.
+::
+
+:::speaker-notes
+Open by contrasting context stuffing with retrieval quality.
+::
+
+## Why md, tmd, and smd belong together {#format-triad}
+
+::scene id=format-triad role=framework
+::layout mode=grid
+::motion sequence=left-to-right pace=normal
+
+:::beat id=md-format role=example reveal=1
+`.md` captures narrative knowledge: human-readable explanation.
+::
+
+:::beat id=tmd-format role=example reveal=2
+`.tmd` captures structured rows: queryable, appendable, and formula-friendly.
+::
+
+:::beat id=smd-format role=example reveal=3
+`.smd` captures sequenced story: indexable beats plus presentation direction.
+::
+
+:::takeaway id=format-triad-takeaway
+ContextFit should treat communication artifacts as first-class memory objects.
+::
