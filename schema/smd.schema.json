@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ContextFit/smd/schema/smd.schema.json",
+  "title": "SMD JSON Export",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["metadata", "title", "preamble", "directives", "scenes"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "title": {
+      "type": ["string", "null"]
+    },
+    "preamble": {
+      "type": "string"
+    },
+    "directives": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/directive" }
+    },
+    "scenes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/scene" }
+    }
+  },
+  "$defs": {
+    "attrs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": ["string", "number", "integer", "boolean", "null", "array", "object"]
+      }
+    },
+    "directive": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name", "attrs", "content", "line"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "attrs": { "$ref": "#/$defs/attrs" },
+        "content": { "type": "string" },
+        "line": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "title", "attrs", "content", "directives", "line"],
+      "properties": {
+        "id": { "type": ["string", "null"] },
+        "title": { "type": ["string", "null"] },
+        "attrs": { "$ref": "#/$defs/attrs" },
+        "content": { "type": "string" },
+        "directives": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/directive" }
+        },
+        "line": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

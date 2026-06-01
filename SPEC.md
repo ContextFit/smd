@@ -173,3 +173,14 @@ The reference validator checks:
 - scenes include a purpose marker such as claim, ask, decision, or takeaway
 - reveal numbers are integer and contiguous
 - strict mode warns when claims lack sources
+
+## UI Integration
+
+Renderers and UI agents should start from the JSON export contract rather than scraping raw SMD text.
+
+See:
+
+- [UI integration guide](docs/UI_INTEGRATION.md)
+- [JSON contract](docs/JSON_CONTRACT.md)
+- [Edit operations](docs/EDIT_OPERATIONS.md)
+- [JSON schema](schema/smd.schema.json)

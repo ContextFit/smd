@@ -60,6 +60,13 @@ smd validate examples/contextfit.smd --strict
 smd export examples/contextfit.smd --format json
 ```
 
+## Integration Docs
+
+- [UI integration guide](docs/UI_INTEGRATION.md)
+- [JSON contract](docs/JSON_CONTRACT.md)
+- [Edit operations](docs/EDIT_OPERATIONS.md)
+- [JSON schema](schema/smd.schema.json)
+
 ## Python API
 
 ```python
